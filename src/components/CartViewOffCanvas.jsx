@@ -16,6 +16,13 @@ export default function CartViewOffCanvas({ orderToCart, cartCounter, decrement,
       setShowEmpty(false)
     }
   }, [orderToCart]);
+
+  const priceUpdate = (array)=>{
+    let initialPrice = array.reduce((total, product) => total + product.quantity * (product.price / product.quantity), 0);
+    setTotalPrice(initialPrice);
+  }
+
+
   const deleteItem = (item) => {
     const updatedProducts = products.filter((product) => product.id !== item.id);
     setProducts(updatedProducts);
@@ -27,8 +34,8 @@ export default function CartViewOffCanvas({ orderToCart, cartCounter, decrement,
     } else {
       setShowEmpty(false)
     }
-    let initialPrice = updatedProducts.reduce((total, product) => total + product.quantity * (product.price / product.quantity), 0);
-    setTotalPrice(initialPrice)
+   
+    priceUpdate(updatedProducts);
   };
 
   const increaseQuantity = (item) => {
@@ -41,8 +48,8 @@ export default function CartViewOffCanvas({ orderToCart, cartCounter, decrement,
       }
       return product;
     });
-    let initialPrice = updatedProducts.reduce((total, product) => total + product.quantity * (product.price / product.quantity), 0);
-    setTotalPrice(initialPrice)
+    
+    priceUpdate(updatedProducts);
     setProducts(updatedProducts);
   };
   const decreaseQuantity = (item) => {
@@ -57,8 +64,7 @@ export default function CartViewOffCanvas({ orderToCart, cartCounter, decrement,
       return product;
     })
     setProducts(updatedProducts);
-    let initialPrice = updatedProducts.reduce((total, product) => total + product.quantity * (product.price / product.quantity), 0);
-    setTotalPrice(initialPrice)
+    priceUpdate(updatedProducts);
   }
 
   const confirmOrder = () => {
