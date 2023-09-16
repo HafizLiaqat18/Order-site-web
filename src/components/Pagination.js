@@ -6,29 +6,29 @@ export default function Pagination() {
     <nav aria-label="Page navigation example">
       <ul className="pagination justify-content-end">
         <li className="page-item">
-          <a className="page-link" href="/">
+        <button className="page-link"> 
             Previous
-          </a>
+          </button> 
         </li>
         <li className="page-item">
-          <a className="page-link" href="/">
+        <button className="page-link"> 
             1
-          </a>
+          </button> 
         </li>
         <li className="page-item">
-          <a className="page-link" href="/">
+        <button className="page-link"> 
             2
-          </a>
+          </button> 
         </li>
         <li className="page-item">
-          <a className="page-link" href="/">
+        <button className="page-link"> 
             3
-          </a>
+          </button> 
         </li>
         <li className="page-item">
-          <a className="page-link" href="/">
+        <button className="page-link"> 
             Next
-          </a>
+          </button> 
         </li>
       </ul>
     </nav>

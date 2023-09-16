@@ -4,9 +4,9 @@ export default function Header({cartCounter ,searchValue,setSearchValue}) {
   return (
     <nav className="navbar navbar-expand-lg px-5 py-3 navbar-dark bg-black sticky-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <button className="navbar-brand" >
         <i className="font-weight-800 h2 text-danger text-uppercase">KFC</i>
-        </a>
+        </button>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,14 +21,14 @@ export default function Header({cartCounter ,searchValue,setSearchValue}) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active border text-deng  border-danger border-3 mx-3" aria-current="page" href="/">
+              <button className="nav-link active border text-deng  border-danger border-3 mx-3" aria-current="page">
                 <h6 className="text-uppercase">Delivery</h6>
-              </a>
+              </button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <button className="nav-link" href="/">
                 <h5 className="text-uppercase mx-3 py-1 text-white">PickUp</h5>
-              </a>
+              </button>
             </li>
 
           </ul>
