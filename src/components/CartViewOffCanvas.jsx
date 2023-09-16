@@ -10,8 +10,8 @@ export default function CartViewOffCanvas({ orderToCart, cartCounter, decrement,
   useEffect(() => {
     setProducts(orderToCart);
 
-    let initialPrice = orderToCart.reduce((total, product) => total + product.quantity * (product.price / product.quantity), 0);
-    setTotalPrice(initialPrice)
+    
+    setTotalPrice(orderToCart);
     if (orderToCart.length > 0) {
       setShowEmpty(false)
     }
