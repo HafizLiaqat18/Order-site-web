@@ -26,7 +26,7 @@ export default function Header({cartCounter ,searchValue,setSearchValue}) {
               </button>
             </li>
             <li className="nav-item">
-              <button className="nav-link" href="/">
+              <button className="nav-link" >
                 <h5 className="text-uppercase mx-3 py-1 text-white">PickUp</h5>
               </button>
             </li>
